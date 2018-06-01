@@ -1,0 +1,57 @@
+﻿Control de Versiones
+Versión
+	Fecha
+	Comentarios
+	Autor
+	0.00
+	01/05/2018
+	Comprobar librería cilindros
+	Diego Arcos
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	Descripción
+
+
+Hacer unas librerías para el control de cilindro
+Requerimientos
+
+
+Parámetros de entrada/control.
+* 2 entradas Reed (Sensor posición cilindro)
+* 1 salida posición
+  
+
+Casos de uso. O descripción de las distintas casuísticas 
+* El cilindro sólo debe actuar cuando esté activado a0. Al llegar a a1 la electroválvula debe desactivarse y el cilindro volverá a la posición donde estaba al inicio.
+* En cualquier otra situación, no debería moverse
+   * Ningún Reed detectando
+   * Los dos Reed detectando a la vez
+* En caso que haya un problema (que detectamos con un temporizador con el tiempo que tarda el cilindro en acabar la carrera), se encenderá la alarma 
+Checklist Pruebas
+
+
+Para cada caso de uso pruebas a realizar y resultado.
+* Secuencia normal
+* Los Reed no detectan
+   * a1 no funciona
+   * a0 no funciona
+   * Ninguno de los dos funciona
+* El cilindro tarda más de lo que debería en llegar al final
